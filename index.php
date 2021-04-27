@@ -18,6 +18,9 @@ require_once './Model/Manager/UserManager.php';
 require_once './Controller/HomeController.php';
 require_once './Controller/ArticleController.php';
 
+require_once './Controller/ConnectionController.php';
+
+use ConnectionController\ConnectionController;
 use Controller\HomeController;
 use Controller\ArticleController;
 
@@ -55,10 +58,10 @@ if(isset($_GET['controller'])) {
     }
 }
 else {
-    // Si le paramètre cxontroller ne se trouve pas dans l'url, alors la page 'home' doit être affichée.
+    // Si le paramètre controller ne se trouve pas dans l'url, alors la page 'home' doit être affichée.
     // Donc on part sur le Home controller en demandant d'afficher la home page.
-    $controller = new HomeController();
-    $controller->homePage();
+    $controller = new ConnectionController;
+    $controller->ConnexionPage();
 }
 
 // Soit l'url ne contient pas le paramètre controller.

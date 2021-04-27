@@ -18,7 +18,7 @@ class DB
         $server = 'localhost';
         $user = 'root';
         $password = '';
-        $database = 'blog_furets';
+        $database = 'blog_mvc';
 
         try {
             self::$dbInstance = new PDO("mysql:host=$server;dbname=$database;charset=utf8", $user, $password);

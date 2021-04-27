@@ -4,7 +4,7 @@
 
 
 <div class="connection">
-    <form action="" method="post">
+    <form action="/Controller/ConnectionController.php" method="post">
         <label for="pseudo">Votre pseudo</label>
         <input type="text" name="pseudo" id="pseudo">
         <label for="pass">Votre password</label>
